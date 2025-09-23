@@ -1,37 +1,42 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import appLogo from '/favicon.svg'
-import PWABadge from './PWABadge.jsx'
-import './App.css'
+import React from 'react';
+import ProductList from './components/ProductList.jsx';
+import PWABadge from './PWABadge.jsx';
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={appLogo} className="logo" alt="pwa-vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>pwa-vite</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
+    <div className="App">
+      <header style={{
+        backgroundColor: '#4caf50',
+        color: 'white',
+        padding: '20px',
+        textAlign: 'center',
+        boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
+      }}>
+        <h1 style={{ margin: '0', fontSize: '2.5rem' }}>🛒 CraftCart</h1>
+        <p style={{ margin: '10px 0 0 0', fontSize: '1.1rem' }}>
+          Discover Unique Handmade Crafts
         </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      </header>
+
+      <main style={{ minHeight: 'calc(100vh - 140px)' }}>
+        <ProductList />
+      </main>
+
+      <footer style={{
+        backgroundColor: '#f5f5f5',
+        padding: '20px',
+        textAlign: 'center',
+        borderTop: '1px solid #ddd'
+      }}>
+        <p style={{ margin: '0', color: '#666' }}>
+          © 2024 CraftCart - Bringing handmade crafts to your doorstep
+        </p>
+      </footer>
+
       <PWABadge />
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;

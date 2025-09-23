@@ -14,10 +14,22 @@ export default defineConfig({
     },
 
     manifest: {
-      name: 'pwa-vite',
-      short_name: 'pwa-vite',
-      description: 'pwa-vite',
+      name: 'CraftCart - Handmade Store',
+      short_name: 'CraftCart',
+      description: 'CraftCart - Handmade crafts eCommerce PWA',
       theme_color: '#ffffff',
+      icons: [
+        {
+          src: 'icons/icon-192x192.png',
+          sizes: '192x192',
+          type: 'image/png'
+        },
+        {
+          src: 'icons/icon-512x512.png',
+          sizes: '512x512',
+          type: 'image/png'
+        }
+      ]
     },
 
     workbox: {

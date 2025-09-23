@@ -1,8 +1,9 @@
 {
-  "name": "pwa-vite",
+  "name": "craftcart",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "description": "CraftCart - Handmade crafts eCommerce PWA",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
